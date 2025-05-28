@@ -1,0 +1,44 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.openweathermap.org
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: http://api.openweathermap.org/data/2.5/weather?zip=10001&appid=dd0c01c1b8c366146168b43592fe078e
+  response:
+    body:
+      string: '{"coord":{"lon":-73.9967,"lat":40.7484},"weather":[{"id":500,"main":"Rain","description":"light
+        rain","icon":"10d"}],"base":"stations","main":{"temp":289,"feels_like":288.1,"temp_min":287.54,"temp_max":290.09,"pressure":1025,"humidity":56,"sea_level":1025,"grnd_level":1023},"visibility":10000,"wind":{"speed":7.2,"deg":170},"rain":{"1h":0.27},"clouds":{"all":100},"dt":1748455007,"sys":{"type":2,"id":2009754,"country":"US","sunrise":1748424539,"sunset":1748477878},"timezone":-14400,"id":0,"name":"New
+        York","cod":200}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '520'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 28 May 2025 18:00:17 GMT
+      Server:
+      - openresty
+      X-Cache-Key:
+      - /data/2.5/weather?zip=10001
+    status:
+      code: 200
+      message: OK
+version: 1

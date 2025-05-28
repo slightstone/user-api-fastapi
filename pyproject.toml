@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "user-api-fastapi"
+version = "0.1.0"
+description = ""
+authors = ["slightstone <slightstone@gmail.com>"]
+readme = "README.md"
+packages = [{include = "user_api_fastapi"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.12"
+uvicorn = {extras = ["standard"], version = "^0.34.2"}
+firebase-admin = "^6.8.0"
+httpx = "^0.28.1"
+pydantic-settings = "^2.9.1"
+timezonefinder = "^6.5.9"
+
+
+[tool.poetry.group.dev.dependencies]
+vcrpy = "^7.0.0"
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+black = "^25.1.0"
+isort = "^6.0.1"
+ruff = "^0.11.11"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

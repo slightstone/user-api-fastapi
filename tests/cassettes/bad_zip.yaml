@@ -1,0 +1,42 @@
+interactions:
+- request:
+    body: ''
+    headers:
+      accept:
+      - '*/*'
+      accept-encoding:
+      - gzip, deflate
+      connection:
+      - keep-alive
+      host:
+      - api.openweathermap.org
+      user-agent:
+      - python-httpx/0.28.1
+    method: GET
+    uri: http://api.openweathermap.org/data/2.5/weather?zip=99999&appid=dd0c01c1b8c366146168b43592fe078e
+  response:
+    body:
+      string: '{"cod":"404","message":"city not found"}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '40'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 28 May 2025 18:00:52 GMT
+      Server:
+      - openresty
+      X-Cache-Key:
+      - /data/2.5/weather?zip=99999
+    status:
+      code: 404
+      message: Not Found
+version: 1
