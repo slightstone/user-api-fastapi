@@ -1,13 +1,15 @@
 import React from "react";
 import "./App.css";
+import UserForm from "./UserForm";
 import UserList from "./UserList";
-import UserForm from "./UserForm"; // ✅ Add this
 
 function App() {
   return (
     <div className="App">
-      <h1>User API Demo</h1>
-      <UserForm /> {/* ✅ Add this */}
+      <h1 style={{ textAlign: "center", marginTop: "30px" }}>
+        User API Demo
+      </h1>
+      <UserForm />
       <UserList />
     </div>
   );

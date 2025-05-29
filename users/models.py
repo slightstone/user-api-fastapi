@@ -17,6 +17,11 @@ class UserCreateRequest(BaseModel):
         description="US ZIP code (5 or 9 digit format)",
     )
 
+    @field_validator("name")
+    @classmethod
+    def normalize_name(cls, v: str) -> str:
+        return v.strip().title()
+
     @field_validator("zip_code")
     @classmethod
     def validate_zip_code(cls, v: str) -> str:
@@ -24,6 +29,16 @@ class UserCreateRequest(BaseModel):
         if not re.fullmatch(r"^\d{5}(-\d{4})?$", v):
             raise ValueError("Invalid US ZIP code format")
         return v
+
+
+class UserUpdateRequest(UserCreateRequest):
+    name: str | None = None
+    zip_code: str | None = Field(
+        default=None,
+        min_length=5,
+        max_length=10,
+        description="US ZIP code (5 or 9 digit format)",
+    )
 
 
 class Coord(BaseModel):
