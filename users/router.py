@@ -2,7 +2,8 @@ from fastapi import APIRouter, HTTPException
 
 from users import firebase
 from users.geocode import fetch_location_from_zip
-from users.models import UserCreateRequest, UserData, UserResponse, UserUpdateRequest
+from users.models import (UserCreateRequest, UserData, UserResponse,
+                          UserUpdateRequest)
 from users.utils import to_firebase_dict, to_firebase_update_dict
 
 router = APIRouter()

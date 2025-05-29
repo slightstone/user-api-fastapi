@@ -2,7 +2,8 @@ import logging
 import re
 from decimal import Decimal
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+from pydantic import (BaseModel, ConfigDict, Field, field_validator,
+                      model_validator)
 from timezonefinder import TimezoneFinder
 
 logger = logging.getLogger(__name__)

@@ -3,12 +3,8 @@ from decimal import Decimal
 import pytest
 from pydantic import ValidationError
 
-from users.models import (
-    Coord,
-    ErrorWeatherLocationModel,
-    UserCreateRequest,
-    WeatherLocation,
-)
+from users.models import (Coord, ErrorWeatherLocationModel, UserCreateRequest,
+                          WeatherLocation)
 
 
 def test_valid_zip_code():
