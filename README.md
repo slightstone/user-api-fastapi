@@ -38,7 +38,7 @@ This project is a backend service to manage users and fetch timezone and locatio
 ### 🔧 Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/user-api-fastapi.git
+git clone https://github.com/slightstone/user-api-fastapi.git
 cd user-api-fastapi
 make install
 ```
