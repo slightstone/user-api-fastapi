@@ -103,10 +103,23 @@ function UserList() {
           <p style={{ color: "red", marginTop: "5px" }}>{fetchError}</p>
         )}
         {fetchedUser && (
-          <div style={{ marginTop: "10px" }}>
+          <div
+            style={{
+              marginTop: "10px",
+              padding: "10px",
+              border: "1px solid #ccc",
+              width: "fit-content",
+              marginInline: "auto",
+              textAlign: "left",
+            }}
+          >
             <strong>Name:</strong> {fetchedUser.name} <br />
-            <strong>ZIP:</strong> {fetchedUser.zip_code} <br />
-            <strong>Timezone:</strong> {fetchedUser.timezone}
+            <strong>ZIP Code:</strong> {fetchedUser.zip_code} <br />
+            <strong>Latitude:</strong> {fetchedUser.latitude} <br />
+            <strong>Longitude:</strong> {fetchedUser.longitude} <br />
+            <strong>Timezone Offset (sec):</strong> {fetchedUser.timezone_offset_seconds} <br />
+            <strong>Timezone:</strong> {fetchedUser.timezone} <br />
+            <strong>Timezone Error:</strong> {fetchedUser.timezone_error ? "Yes" : "No"} <br />
           </div>
         )}
       </div>
